@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+  /* 상단바 전체 스타일*/
+nav {
+    background: #333;
+    height: 100px;
+}
+/* 상단바 내 왼쪽 이미지 */  
+nav ul li img {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    float: left;
+    list-style-type: none;
+}
+/* 상단바 검색창 */
+.search { 
+    float:left;
+    padding: 10px;
+    margin: 10px;
+    list-style-type: none;
+}
+/* 로그인.회원가입 */
+nav ul li a {
+    color: white;
+    float: right;
+}
+/* 회원가입 로그인 정렬 */
+.log_reg{
+    list-style-type: none;
+}
+
+/* 왼쪽 사이드바 */
+.leftside{
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        width: 250px;
+        background: #cececee5;
+        height: 700px;
+        overflow: auto;
+        position: static;
+        float:left;
+        
+}
+.collapse {
+    display: none;
+}
+
+.under {
+    background: #f0f0f0e5;
+}
+
+.show {
+  display: block;
+}
+ul a {
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  color: #000;
+  font-weight: bold;
+}
+
+.notp {
+  list-style-type: none;
+  padding : 10px
+}
+
+.kakao-login-btn{
+    margin-bottom: 30px;
+}
+
+ul a:hover {
+    background: #333;
+    color: #fff;
+  }
+  
+ul a.home {
+    background : #333;
+    color: #fff;
+  }
+
+  
+body {
+    font-family: Arial, sans-serif;
+}
+
+.product-detail-container {
+    display: flex;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.product-image img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.product-info h1 {
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.price {
+    font-size: 24px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.description {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

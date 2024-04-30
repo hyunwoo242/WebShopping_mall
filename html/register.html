@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+    <link href="../css/register.css" rel="stylesheet">
+    <style>
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class>
+            <nav>
+                <ul>
+                    <li><img src="http://placehold.it/200X100"></li>
+                    <input type="text" class = 'search' placeholder="검색어 입력">
+                    <li class ='log_reg'><a href="#" onclick="location.href='index.html'">로그인</a></li>
+                    <li class ='log_reg'><a href="#" onclick="location.href='index.html'">회원가입</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class = leftside>
+            <ul class = 'notp'>
+                <div class="main_home">
+                    <ul><a class="home" href="#">홈</a></ul>
+                </div>
+            </ul>
+            <!--상세 카테고리-->
+                <div class="bath_kitch">
+
+                    <ul><a href="#" onclick="toggleSubMenu('main1')" aria-expanded="false">수전금구,주방 욕실용품</a>
+                        <div class="collapse" id="main1">
+                            <li class="under"><a herf="#">주방수전, 욕실수전</a></li>
+                            <li class="under"><a herf="#">수도꼭지, 앵글밸브</a></li>
+                            <li class="under"><a herf="#">주방, 욕실부속</a></li>
+                        </div>
+                    </ul>
+
+                    
+                    <ul><a href="#" onclick="toggleSubMenu('main2')" aria-expanded="false">원예 예초기 및 악세사리</a>
+                        <div id="main2" class="collapse">
+                            <li class="under"><a herf="#">예초기용품</a></li>
+                            <li class="under"><a herf="#">원예용품</a></li>
+                        </div>
+                    </ul>
+
+                    <ul><a href="#" onclick="toggleSubMenu('main3')" aria-expanded="false">전동공구용품, 에어용품 그라인터용품</a>
+                        <div id="main3" class="collapse">
+                            <li class="under"><a herf="#">전동공구, 전기공구, 복스소켓</a></li>
+                            <li class="under"><a herf="#">에어용품 드릴, 스텝드릴</a></li>
+                            <li class="under"><a herf="#">그라인더용 사포</a></li>
+                            <li class="under"><a herf="#">공구가방, 벨트BOX</a></li>
+                        </div>
+                    </ul>   
+
+                    <ul><a href="#" onclick="toggleSubMenu('main4')" aria-expanded="false">방수</a>
+                        <div id="main4" class="collapse">
+                            <li class="under"><a herf="#">균열방수 틈새방수</a></li>
+                        </div>
+                    </ul>  
+
+                    <ul><a href="#" onclick="toggleSubMenu('main5')" aria-expanded="false">수공구</a>
+                        <div id="main5" class="collapse">
+                            <li class="under"><a herf="#">드라이버,자화기,비트렌치</a></li>
+                            <li class="under"><a herf="#">칼,가위,칼날,스크래퍼</a></li>
+                            <li class="under"><a herf="#">믹서기 손타카외기타</a></li>
+                            <li class="under"><a herf="#">키레스척, 코너드라이버</a></li>
+                        </div>
+                    </ul>
+
+                    <ul><a href="#" onclick="toggleSubMenu('main6')" aria-expanded="false">피스 나사용품</a>
+                        <div id="main6" class="collapse">
+                            <li class="under"><a herf="#">피스볼트소포장</a></li>
+                        </div>
+                    </ul>    
+                </div> 
+        </div>
+    </main>
+    <div class="signup-container">
+        <h2>회원가입</h2>
+        <form action="/signup" method="post">
+            <div class="form-input">
+                <label for="name">이름</label>
+                <input type="text" id="name" name="name" >
+            </div>
+
+            <label for="email">이메일</label>
+            <div>
+                <input type="text" class="form-email">
+                <tr>@
+                <td>  
+                    <input type='text' name="email_dns" class="form-email">
+                    <select name="emailaddr" class="form-email">
+                        <option value="">직접입력</option>
+                        <option value="daum.net">daum.net</option>
+                        <option value="empal.com">empal.com</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="hanmail.net">hanmail.net</option>
+                        <option value="msn.com">msn.com</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="nate.com">nate.com</option>
+              </select>
+                </td>
+            </tr>
+        </div>
+            <div class="form-input">
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-input">
+                <label for="password">비밀번호 확인</label>
+                <input type="password" id="password_re" name="password_re" required>
+            </div>
+            <div>
+               <label for="phone">휴대폰</label><br>
+               <input type="text" name="tel_h1" class="form-email"> -
+               <input type="text" name="tel_h2_1" class="form-email"> -
+               <input type="text" name="tel_h2_2" class="form-email">
+           </td>
+          </tr>
+
+            </div>
+            <br>
+            <button type="submit" class="signup-button">회원가입</button>
+        </form>
+    </div>
+
+    <script>
+        function toggleSubMenu(submenuId) {
+        var submenu = document.getElementById(submenuId);
+        if (submenu.style.display === 'block') {
+        submenu.style.display = 'none';
+        } else {
+        submenu.style.display = 'block';
+        }
+    }
+    </script>
+</body>
+</html>

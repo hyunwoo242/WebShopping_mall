@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <link href="../css/login.css" rel="stylesheet">
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script> <!-- 카카오 SDK 추가 -->
+    <script>
+        // 카카오 SDK 초기화
+        Kakao.init('YOUR_KAKAO_JAVASCRIPT_KEY');
+        
+        function loginWithKakao() {
+            Kakao.Auth.login({
+                success: function(authObj) {
+                    console.log(authObj);
+                    // 로그인 성공 시 로직 구현
+                },
+                fail: function(err) {
+                    console.error(err);
+                }
+            });
+        }
+
+        // 네이버 로그인 초기화 스크립트
+        function initNaverLogin() {
+            var naverLogin = new naver.LoginWithNaverId(
+                {
+                    clientId: "YOUR_NAVER_CLIENT_ID",
+                    callbackUrl: "YOUR_CALLBACK_URL",
+                    isPopup: false, /* 팝업을 통한 연동처리 여부 */
+                    loginButton: {color: "green", type: 3, height: 60} /* 로그인 버튼의 타입을 지정 */
+                }
+            );
+            naverLogin.init();
+        }
+        //사이드바
+        function toggleSubMenu(submenuId) {
+        var submenu = document.getElementById(submenuId);
+        if (submenu.style.display === 'block') {
+        submenu.style.display = 'none';
+        } else {
+        submenu.style.display = 'block';
+        }
+    }
+    </script>
+    <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" onload="initNaverLogin();"></script> <!-- 네이버 SDK 추가 -->
+</head>
+<body>
+    <header>
+        
+        <div class>
+            <nav>
+                <ul>
+                    <li><img src="http://placehold.it/200X100"></li>
+                    <input type="text" class = 'search' placeholder="검색어 입력">
+                    <li class ='log_reg'><a href="#" onclick="location.href='index.html'">로그인</a></li>
+                    <li class ='log_reg'><a href="#" onclick="location.href='index.html'">회원가입</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <!--상단 로고와 메뉴바-->
+    <!--왼쪽 사이드 바-->
+    <main>
+        <div class = leftside>
+            <ul class = 'notp'>
+                <div class="main_home">
+                    <ul><a class="home" href="#">홈</a></ul>
+                </div>
+            </ul>
+            <!--상세 카테고리-->
+                <div class="bath_kitch">
+
+                    <ul><a href="#" onclick="toggleSubMenu('main1')" aria-expanded="false">수전금구,주방 욕실용품</a>
+                        <div class="collapse" id="main1">
+                            <li class="under"><a herf="#">주방수전, 욕실수전</a></li>
+                            <li class="under"><a herf="#">수도꼭지, 앵글밸브</a></li>
+                            <li class="under"><a herf="#">주방, 욕실부속</a></li>
+                        </div>
+                    </ul>
+
+                    
+                    <ul><a href="#" onclick="toggleSubMenu('main2')" aria-expanded="false">원예 예초기 및 악세사리</a>
+                        <div id="main2" class="collapse">
+                            <li class="under"><a herf="#">예초기용품</a></li>
+                            <li class="under"><a herf="#">원예용품</a></li>
+                        </div>
+                    </ul>
+
+                    <ul><a href="#" onclick="toggleSubMenu('main3')" aria-expanded="false">전동공구용품, 에어용품 그라인터용품</a>
+                        <div id="main3" class="collapse">
+                            <li class="under"><a herf="#">전동공구, 전기공구, 복스소켓</a></li>
+                            <li class="under"><a herf="#">에어용품 드릴, 스텝드릴</a></li>
+                            <li class="under"><a herf="#">그라인더용 사포</a></li>
+                            <li class="under"><a herf="#">공구가방, 벨트BOX</a></li>
+                        </div>
+                    </ul>   
+
+                    <ul><a href="#" onclick="toggleSubMenu('main4')" aria-expanded="false">방수</a>
+                        <div id="main4" class="collapse">
+                            <li class="under"><a herf="#">균열방수 틈새방수</a></li>
+                        </div>
+                    </ul>  
+
+                    <ul><a href="#" onclick="toggleSubMenu('main5')" aria-expanded="false">수공구</a>
+                        <div id="main5" class="collapse">
+                            <li class="under"><a herf="#">드라이버,자화기,비트렌치</a></li>
+                            <li class="under"><a herf="#">칼,가위,칼날,스크래퍼</a></li>
+                            <li class="under"><a herf="#">믹서기 손타카외기타</a></li>
+                            <li class="under"><a herf="#">키레스척, 코너드라이버</a></li>
+                        </div>
+                    </ul>
+
+                    <ul><a href="#" onclick="toggleSubMenu('main6')" aria-expanded="false">피스 나사용품</a>
+                        <div id="main6" class="collapse">
+                            <li class="under"><a herf="#">피스볼트소포장</a></li>
+                        </div>
+                    </ul>    
+                </div> 
+        </div>
+
+    <!--로그인 창-->
+    <div class="login_logo">
+        
+    </div>
+    
+    <div class="login-container">
+        <h2>로그인</h2>
+        <br>
+        <form>
+            <div class="form-control">
+                <label for="username">아이디</label>
+                <input type="text" id="username" name="username" class="login_1" required>
+            </div>
+                <div class="form-control">
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" name="password" class="login_1" required>
+            </div>
+                <div class="form-control">
+                    <button type="submit" >로그인</button>
+            </div>
+            <div class="form-control">
+                <button type="button" class="login_1">회원가입</button>
+            </div>
+        </form>
+        <!--api 구현-->
+        <button type="button" id="form-control" onclick="loginWithKakao()">카카오로 로그인하기</button>
+        <div id="naverIdLogin">
+            <br>
+            <button type="button" id="form-control" onclick="initNaverLogin()">네이버 로그인하기</button>
+        </div> <!-- 네이버 로그인 버튼을 이 위치에 렌더링 -->
+    </div>
+</body>
+</html>

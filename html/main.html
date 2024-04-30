@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Net</title>
+    <link href="../css/main.css" rel="stylesheet">
+
+</head>
+<body>  
+    <!--상단 로고와 메뉴바-->
+    <header>
+        
+        <div class>
+            <nav>
+                <ul>
+                    <li><img src="http://placehold.it/200X100"></li>
+                    <input type="text" class = 'search' placeholder="검색어 입력">
+                    <li class ='log_reg'><a href="#" onclick="location.href='index.html'">로그인</a></li>
+                    <li class ='log_reg'><a href="#" onclick="location.href='index.html'">회원가입</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--왼쪽 사이드 바-->
+    <main>
+        <div class = leftside>
+            <ul class = 'notp'>
+                <div class="main_home">
+                    <ul><a class="home" href="#">홈</a></ul>
+                </div>
+            </ul>
+            <!--상세 카테고리-->
+                <div class="bath_kitch">
+
+                    <ul><a href="#" onclick="toggleSubMenu('main1')" aria-expanded="false">수전금구,주방 욕실용품</a>
+                        <div class="collapse" id="main1">
+                            <li class="under"><a herf="#">주방수전, 욕실수전</a></li>
+                            <li class="under"><a herf="#">수도꼭지, 앵글밸브</a></li>
+                            <li class="under"><a herf="#">주방, 욕실부속</a></li>
+                        </div>
+                    </ul>
+
+                    
+                    <ul><a href="#" onclick="toggleSubMenu('main2')" aria-expanded="false">원예 예초기 및 악세사리</a>
+                        <div id="main2" class="collapse">
+                            <li class="under"><a herf="#">예초기용품</a></li>
+                            <li class="under"><a herf="#">원예용품</a></li>
+                        </div>
+                    </ul>
+
+                    <ul><a href="#" onclick="toggleSubMenu('main3')" aria-expanded="false">전동공구용품, 에어용품 그라인터용품</a>
+                        <div id="main3" class="collapse">
+                            <li class="under"><a herf="#">전동공구, 전기공구, 복스소켓</a></li>
+                            <li class="under"><a herf="#">에어용품 드릴, 스텝드릴</a></li>
+                            <li class="under"><a herf="#">그라인더용 사포</a></li>
+                            <li class="under"><a herf="#">공구가방, 벨트BOX</a></li>
+                        </div>
+                    </ul>   
+
+                    <ul><a href="#" onclick="toggleSubMenu('main4')" aria-expanded="false">방수</a>
+                        <div id="main4" class="collapse">
+                            <li class="under"><a herf="#">균열방수 틈새방수</a></li>
+                        </div>
+                    </ul>  
+
+                    <ul><a href="#" onclick="toggleSubMenu('main5')" aria-expanded="false">수공구</a>
+                        <div id="main5" class="collapse">
+                            <li class="under"><a herf="#">드라이버,자화기,비트렌치</a></li>
+                            <li class="under"><a herf="#">칼,가위,칼날,스크래퍼</a></li>
+                            <li class="under"><a herf="#">믹서기 손타카외기타</a></li>
+                            <li class="under"><a herf="#">키레스척, 코너드라이버</a></li>
+                        </div>
+                    </ul>
+
+                    <ul><a href="#" onclick="toggleSubMenu('main6')" aria-expanded="false">피스 나사용품</a>
+                        <div id="main6" class="collapse">
+                            <li class="under"><a herf="#">피스볼트소포장</a></li>
+                        </div>
+                    </ul>    
+                </div> 
+        </div>
+        <!--넘어가는 광고-->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="http://placehold.it/300x100" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="http://placehold.it/300x100" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="http://placehold.it/300x100" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            </div>
+            <br>
+            
+
+
+        <section class="featured-products">
+            <h2>추천 제품</h2>
+            <div class="product-list">
+                <article class="product">
+                    <img src="product1.jpg" alt="제품 1">
+                    <h3>제품 1</h3>
+                    <p>제품 설명이 여기에 들어갑니다.</p>
+                </article>
+                <article class="product">
+                    <img src="product2.jpg" alt="제품 2">
+                    <h3>제품 2</h3>
+                    <p>제품 설명이 여기에 들어갑니다.</p>
+                </article>
+                <article class="product">
+                    <img src="product2.jpg" alt="제품 2">
+                    <h3>제품 2</h3>
+                    <p>제품 설명이 여기에 들어갑니다.</p>
+                </article>
+                <article class="product">
+                    <img src="product2.jpg" alt="제품 2">
+                    <h3>제품 2</h3>
+                    <p>제품 설명이 여기에 들어갑니다.</p>
+                </article>
+                <article class="product">
+                    <img src="product2.jpg" alt="제품 2">
+                    <h3>제품 2</h3>
+                    <p>제품 설명이 여기에 들어갑니다.</p>
+                </article>
+                <article class="product">
+                    <img src="product2.jpg" alt="제품 2">
+                    <h3>제품 2</h3>
+                    <p>제품 설명이 여기에 들어갑니다.</p>
+                </article>
+                <article class="product">
+                    <img src="product2.jpg" alt="제품 2">
+                    <h3>제품 2</h3>
+                    <p>제품 설명이 여기에 들어갑니다.</p>
+                </article>
+                <article class="product">
+                    <img src="product2.jpg" alt="제품 2">
+                    <h3>제품 2</h3>
+                    <p>제품 설명이 여기에 들어갑니다.</p>
+                </article>
+                <article class="product">
+                    <img src="product2.jpg" alt="제품 2">
+                    <h3>제품 2</h3>
+                    <p>제품 설명이 여기에 들어갑니다.</p>
+                </article><article class="product">
+                    <img src="product2.jpg" alt="제품 2">
+                    <h3>제품 2</h3>
+                    <p>제품 설명이 여기에 들어갑니다.</p>
+                </article><article class="product">
+                    <img src="product2.jpg" alt="제품 2">
+                    <h3>제품 2</h3>
+                    <p>제품 설명이 여기에 들어갑니다.</p>
+                </article><article class="product">
+                    <img src="product2.jpg" alt="제품 2">
+                    <h3>제품 2</h3>
+                    <p>제품 설명이 여기에 들어갑니다.</p>
+                </article>
+                <!-- 추가 제품 -->
+            </div>
+        </section>
+
+        <section>
+            
+
+        </section>
+        <!-- 추가 섹션 -->
+    </main>
+
+    <footer>
+        <p>© 2024 나의 웹 쇼핑몰. 모든 권리 보유.</p>
+    </footer>
+    <script>
+        function toggleSubMenu(submenuId) {
+    var submenu = document.getElementById(submenuId);
+    if (submenu.style.display === 'block') {
+      submenu.style.display = 'none';
+    } else {
+      submenu.style.display = 'block';
+    }
+  }
+    //슬라이드 쇼
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    }
+    </script>
+</body>
+</html>
